@@ -1,9 +1,9 @@
-package MapGenerator;
+package FactoryMethod;
 
 public abstract class Game {
-    protected CityMap map;
+    protected Map map;
 
-    public abstract CityMap createMap(int width, int height);
+    public abstract Map createMap(int width, int height);
 
     public void play(int width, int height) {
         map = createMap(width, height);

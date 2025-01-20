@@ -1,5 +1,5 @@
 // Tile.java
-package MapGenerator;
+package FactoryMethod;
 
 public interface Tile {
     char getCharacter();

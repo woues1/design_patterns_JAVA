@@ -1,5 +1,5 @@
 // WildernessMap.java
-package MapGenerator;
+package FactoryMethod;
 
 public class WildernessMap extends Map {
 

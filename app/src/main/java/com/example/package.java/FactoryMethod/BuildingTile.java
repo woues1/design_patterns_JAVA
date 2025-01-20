@@ -1,5 +1,5 @@
 // BuildingTile.java
-package MapGenerator;
+package FactoryMethod;
 
 public class BuildingTile implements Tile {
     @Override

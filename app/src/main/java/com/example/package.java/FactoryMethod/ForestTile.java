@@ -1,5 +1,5 @@
 // ForestTile.java
-package MapGenerator;
+package FactoryMethod;
 
 public class ForestTile implements Tile {
     @Override

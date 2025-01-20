@@ -1,8 +1,8 @@
-package MapGenerator;
+package FactoryMethod;
 
 import java.util.Random;
 
-abstract class Map {
+public abstract class Map {
     protected Tile[][] tiles;
     protected int width;
     protected int height;

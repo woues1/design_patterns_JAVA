@@ -1,4 +1,4 @@
-package MapGenerator;
+package FactoryMethod;
 
 public class SwampTile implements Tile {
     @Override
