@@ -13,7 +13,7 @@ public class WeatherStation implements Runnable {
     public WeatherStation() {
         observers = new ArrayList<>();
         random = new Random();
-        temperature = random.nextInt(41) - 10; // Initial temperature between -10 and 30
+        temperature = random.nextInt(41) - 10;
         running = true;
     }
 
@@ -32,8 +32,8 @@ public class WeatherStation implements Runnable {
     }
 
     private void updateTemperature() {
-        int change = random.nextInt(3) - 1; // Change temperature by -1, 0, or 1
-        temperature = Math.max(-10, Math.min(30, temperature + change)); // Keep within -10 to 30
+        int change = random.nextInt(3) - 1;
+        temperature = Math.max(-10, Math.min(30, temperature + change));
     }
 
     @Override
@@ -42,7 +42,7 @@ public class WeatherStation implements Runnable {
             updateTemperature();
             notifyObservers();
             try {
-                Thread.sleep((random.nextInt(5) + 1) * 1000); // Sleep for 1-5 seconds
+                Thread.sleep((random.nextInt(5) + 1) * 1000);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }

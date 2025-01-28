@@ -16,7 +16,5 @@ public class Main {
         Thread weatherThread = new Thread(weatherStation);
         weatherThread.start();
 
-        System.out.println("Display 2 removed.");
-
     }
 }
