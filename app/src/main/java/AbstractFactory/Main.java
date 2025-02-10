@@ -1,6 +1,5 @@
 package AbstractFactory;
 
-import AbstractFactory.View.AFactory;
 import AbstractFactory.View.BFactory;
 import AbstractFactory.View.UIFactory;
 
