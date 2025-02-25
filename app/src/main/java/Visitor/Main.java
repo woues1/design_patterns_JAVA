@@ -41,6 +41,8 @@ public class Main {
         SearchVisitor searchVisitor = new SearchVisitor(".txt");
         //root.accept(searchVisitor);
         home.accept(searchVisitor);
+
+
         System.out.println("Files with '.txt' extension:");
         for (File file : searchVisitor.getMatchingFiles()) {
             System.out.println(file.getName());
