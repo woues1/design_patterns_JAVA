@@ -11,18 +11,19 @@ public class TileGraphicFactory {
         if(image == null) {
             switch (type) {
                 case FOREST:
-                    tileGraphics.put(type, new ForestTileImage("Forest.png", "A dense forest"));
+                    image = new ForestTileImage("Forest.png", "A dense forest");
                     break;
                 case ROAD:
-                    tileGraphics.put(type, new RoadTileImage("Road.png", "A dirt road"));
+                    image = new RoadTileImage("Road.png", "A dirt road");
                     break;
                 case SWAMP:
-                    tileGraphics.put(type, new SwampTileImage("Swamp.png", "A murky swamp"));
+                    image = new SwampTileImage("Swamp.png", "A murky swamp");
                     break;
                 case WATER:
-                    tileGraphics.put(type, new WaterTileImage("Water.png", "A body of water"));
+                    image = new WaterTileImage("Water.png", "A body of water");
                     break;
             }
+            tileGraphics.put(type, image);
         }
         return image;
     }
