@@ -34,9 +34,13 @@ public class ChatApp extends Application {
         ChatClient client = new ChatClient(username, mediator, messageArea);
 
         sendButton.setOnAction(e -> {
+
             String message = messageField.getText();
             String recipient = recipientField.getText();
+
+            // Send message to recipient
             client.sendMessage(message, recipient);
+
             messageArea.appendText("[" + username + " to " + recipient + "]: " + message + "\n");
             messageField.clear();
         });
