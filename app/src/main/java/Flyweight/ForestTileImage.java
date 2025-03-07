@@ -5,8 +5,9 @@ public class ForestTileImage implements TileImage {
     private final Image image;
     private String description;
     public ForestTileImage(String img, String desc){
-        this.image = new Image(getClass().getResourceAsStream("/" + img));
+        this.image = new Image("Forest.png");
         this.description = desc;
+
     }
 
     @Override

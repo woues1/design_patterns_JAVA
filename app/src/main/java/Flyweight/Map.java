@@ -32,7 +32,7 @@ public abstract class Map {
             for (int j = 0; j < height; j++) {
                 Tile tile = tiles[i][j];
                 System.out.println(tile.getTileImage().getImage());
-                //gc.drawImage(tile.getTileImage().getImage(), i * 32, j * 32);
+                gc.drawImage(tile.getTileImage().getImage(), i * 32, j * 32);
             }
         }
     }
