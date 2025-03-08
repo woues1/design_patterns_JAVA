@@ -16,6 +16,7 @@ public class GUI extends Application {
     private Command moveCursorUp;
     private Command moveCursorDown;
     private Command toggleColorCommand;
+    private Command generateCodeCommand;
 
     @Override
     public void start(Stage primaryStage) {
@@ -31,7 +32,10 @@ public class GUI extends Application {
         MoveUp moveUp = new MoveUp(pixelArtCursor);
         MoveDown moveDown = new MoveDown(pixelArtCursor);
         ToggleColor toggleColor = new ToggleColor(pixelArtCursor);
+        GenerateCode generateCode = new GenerateCode(pixelArtCursor);
 
+
+        generateCodeCommand = new GenerateCodeCommand(generateCode);
         moveCursorRight = new MoveCursorRightCommand(moveRight);
         moveCursorLeft = new MoveCursorLeftCommand(moveLeft);
         moveCursorUp = new MoveCursorUpCommand(moveUp);
@@ -43,24 +47,7 @@ public class GUI extends Application {
         VBox root = new VBox();
         Button createCodeButton = new Button("Create Code");
         createCodeButton.setOnMouseClicked(event -> {
-            int[][] grid = pixelArtCursor.getGrid();
-            System.out.println("int[][] pixelArt = {");
-            for (int i = 0; i < grid.length; i++) {
-                System.out.print("    {");
-                for (int j = 0; j < grid[i].length; j++) {
-                    System.out.print(grid[i][j]);
-                    if (j < grid[i].length - 1) {
-                        System.out.print(", ");
-                    }
-                }
-                System.out.print("}");
-                if (i < grid.length - 1) {
-                    System.out.println(",");
-                } else {
-                    System.out.println();
-                }
-            }
-            System.out.println("};");
+            generateCodeCommand.execute();
         });
         createCodeButton.setFocusTraversable(false);
         root.getChildren().add(createCodeButton);
